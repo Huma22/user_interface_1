@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button inputButton;
     Button ContactsButton;
+    //Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
