@@ -1,9 +1,9 @@
 Android Development 
-(GeidView, Custom Adapter(Adaptor Design Pattern), ListView, WebView, Context Menu)
 
-The main activity in the app displays a grid. Each grid cell contains a thumbnail picture of a car above the name of the car’s manufacturer. Each grid cell supports two kinds of functionality, depending on whether an app viewer performs a short vs. a long click on a cell. A short click brings up a new activity that shows the entire picture of the selected car on the entire device display. The user can return to the grid view by selecting the back soft button on the phone. However, if a user clicks on the displayed picture instead, the app opens a browser activity showing the web site of the car’s manufacturer. A long click on a grid cell brings up a context menu showing the following three options for the car under consideration: 
-(1) View the entire picture 
+The main activity in this application has two buttons, one labeled "InputPage" and the other labeled "ContactsPage." When the app starts, the "MainActivity" class's "onCreate" method is called, and it sets the layout for the activity to "activity_main" and sets the title of the activity to "Main." The code then sets an OnClickListener for the "inputButton" variable, which when clicked, will call the "openSecondActivity" method. The "openSecondActivity" method creates a new Intent that starts the "MainActivity2" class, and the startActivityForResult method starts this new activity. 
 
-(2) Show the official web page of the car manufacturer in a new activity 
+Then, the code override the onActivityResult method, which gets called when the "MainActivity2" class finishes and returns a result. The method first checks if the request code is 100 and if the result code is RESULT_OK. If both conditions are true, the code sets an OnClickListener for the "ContactsButton" variable, which when clicked, will create a new Intent with the action of INSERT and the data of "ContactsContract.Contacts.CONTENT_URI". The intent then put extra with key "ContactsContract.Intents.Insert.NAME" and value from the userinput in the previous activity, then start this new activity.
 
-(3) bring up a list containing the names and addresses of at least three car dealers for the selected manufacturer in greater Chicago area. When user clicks on a phone number or the address shown in the list, a phone dialer or defaul map app is opened. 
+Otherwise, if the result is not OK, it check for invalid input such as empty name or number in the name then shows a Toast message to the user accordingly.
+
+
