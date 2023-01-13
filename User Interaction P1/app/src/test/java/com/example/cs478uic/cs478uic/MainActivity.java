@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+//startActivityForResult() and onActivityResult() APIs are available on the Activity class on all API levels
     public void openSecondActivity(){
         Intent openInputPage = new Intent(MainActivity.this, MainActivity2.class);
         startActivityForResult(openInputPage, 100);
