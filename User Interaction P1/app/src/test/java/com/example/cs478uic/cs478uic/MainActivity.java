@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 openSecondActivity();
             }
         });
-
+//setOnClickListener takes View.OnClickListener as its parameter.
         ContactsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
